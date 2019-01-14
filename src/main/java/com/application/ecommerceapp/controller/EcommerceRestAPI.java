@@ -18,4 +18,9 @@ public class EcommerceRestAPI {
     private ResponseEntity userLogin(@RequestBody UserPojo user){
         return ResponseEntity.status(200).body(user);
     }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/register", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    private ResponseEntity userRegistration(@RequestBody UserPojo user){
+        return ResponseEntity.status(200).body(user);
+    }
 }
